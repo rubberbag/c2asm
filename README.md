@@ -4,7 +4,7 @@
 
 This project currently supports **GCC** and **Clang** and is ideal for anyone learning C, assembly, or compiler behavior.
 
----
+
 
 ## Features
 
@@ -17,7 +17,7 @@ This project currently supports **GCC** and **Clang** and is ideal for anyone le
 - **Instruction count**: shows the number of instructions per function.  
 - **Save assembly**: writes output to `.s` files instead of only printing to console.  
 
----
+
 
 ## How It Works
 
@@ -27,15 +27,11 @@ This project currently supports **GCC** and **Clang** and is ideal for anyone le
 - Processes output according to user flags (focus, strip, size, save).
 - In watch mode, automatically detects file changes and shows differences in assembly.
 
----
-
 ## Requirements
 
 - **GCC** or **Clang** installed on your system.  
 - Terminal environment  
 - C compiler capable of generating Intel-syntax assembly (`-masm=intel`).  
-
----
 
 ## Quick Start
 
@@ -91,29 +87,20 @@ make clean     # Remove executable and temporary files
 ./asm_explorer --watch dir/file.c -- -Wall -Wextra -g -Iinclude
 ```
 
----
-
 ## Notes & Future Improvements
 
-> Designed primarily for learning and exploration.
+Designed primarily for learning and exploring C-to-assembly translation.
 
-- Watch mode currently relies on Linux/macOS inotify. Windows support may require adjustments.
--Future improvements may include:
-- Cleaner and more structured assembly output
-- Cross-platform file monitoring
--Support for multiple source files dynamically
-- Advanced focus and filtering options
+* **Platform support:** Watch mode currently relies on Linux `inotify` (macOS/Windows support would require `kqueue`/file-polling adjustments).
+* **Planned improvements:**
+  * Cleaner, more structured assembly output formatting
+  * Cross-platform file monitoring
+  * Dynamic support for multiple source files
+  * Advanced symbol focus and filtering options
 
----
-
-## Disclaimer
-
-This project isn’t perfect — it’s a **learning-stage tool** designed to explore C and assembly.  
-Some features (like watch mode) may have platform limitations, and output formatting can be rough.  
-Future versions may improve cross-platform support, usability, and assembly presentation.
-
----
+### Disclaimer
+This is an intentionally lightweight, learning-stage CLI tool built to explore C and assembly internals. Some features (such as watch mode and edge-case argument handling) have known platform and input limitations, and output formatting is kept minimal.
 
 ## Author
 
-NERRISON
+BOADU NERISON PHILIP
